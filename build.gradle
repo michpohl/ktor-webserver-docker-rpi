@@ -2,7 +2,7 @@ buildscript {
     repositories {
         jcenter()
     }
-    
+
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
@@ -36,4 +36,14 @@ dependencies {
     implementation "io.ktor:ktor-client-core-jvm:$ktor_version"
     implementation "io.ktor:ktor-client-apache:$ktor_version"
     testImplementation "io.ktor:ktor-server-tests:$ktor_version"
+}
+
+tasks.jar {
+    manifest {
+        attributes["Main-Class"] = "com.experiment.MainKt"
+
+    }
+    configurations["compileClasspath"].forEach {
+                from(zipTree(it.absoluteFile))
+    }
 }
