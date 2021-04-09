@@ -9,6 +9,7 @@ import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 
 fun main() {
+    println("this thing is running")
     val server = embeddedServer(Netty, port = 8080) {
         routing {
             get("/") {
