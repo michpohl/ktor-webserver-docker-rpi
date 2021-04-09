@@ -7,7 +7,7 @@ root = __dir__
 puts root
 # TODO tun these into arguments or maybe env vars
 artifacts_path = "#{root}/../build/libs"
-docker_jars_path = "#{root}/../docker/jar"
+docker_jars_path = "#{root}/../docker"
 
 puts "Move latest jar artifact to docker"
 
