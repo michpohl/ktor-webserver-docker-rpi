@@ -11,17 +11,17 @@ docker_jars_path = "#{root}/../docker"
 
 puts "Move latest jar artifact to docker"
 
-# Clean docker jar folder
+# Clean docker jar folder of .jar files
 if Dir.exist?(docker_jars_path)
     Dir.foreach(docker_jars_path) do |file|
         filename = File.join(docker_jars_path, file)
         File.delete(filename) if filename.end_with?(".jar")
-        # File.delete(filename) if file != '.' && file != '..' && file != 'Dockerfile' && file !
     end
 else
     puts "Docker jar folder was not found"
     exit 1    
 end
+
 # Copy newest jar over
 if Dir.exist?(artifacts_path)
     puts "artifacts folder exists. Checking jars..."
@@ -36,7 +36,6 @@ else
     puts "Artifacts folder was not found"
     exit 1
 end
-
 
 # Rename jar file
 finalname = "tinyserver.jar"
