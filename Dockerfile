@@ -5,7 +5,7 @@
 FROM gradle:jdk15 as builder
 COPY --chown=gradle:gradle application /application
 WORKDIR /application
-RUN gradle build
+RUN gradle clean build jar
 
 #####################
 # run the server
