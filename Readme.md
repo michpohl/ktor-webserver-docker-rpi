@@ -1,4 +1,4 @@
-# Ktor Webserver Docker Container (for Raspberry Pi)
+# Ktor Webserver Docker Container (for Raspberry Pi 4)
 
 Have you ever wanted to build a local web server using Kotlin, and run it in Docker on your Raspberry Pi? Then this might be for you (Of course you can run your container on other machines too). This should enable you to quickly deploy a base application to your Pi without searching the web for all the issues why it's not working yet :-)
 
@@ -8,7 +8,7 @@ Have you ever wanted to build a local web server using Kotlin, and run it in Doc
 
 1. Clone this repository into a convenient location on your device
 2. Navigate into the cloned repository's directory
-3. If you're **not** using this on a Raspberry Pi (or another armv7 machine), open the `Dockerfile` and change the used JDK image in the FROM step to the appropriate one
+3. If you're **not** using this on a Raspberry Pi 4 (or another armv7 machine), open the `Dockerfile` and change the used JDK image in the FROM step to the appropriate one
 3. Run `./bin/setup.sh` to install and setup **Docker** and **Docker Compose** (If you want a different user than **pi** to be your Docker user, change it in the script first)
 4. Restart the pi: `./sudo reboot now`
 5. Navigate into the repository's directory again
