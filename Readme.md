@@ -14,7 +14,7 @@ Have you ever wanted to build a local web server using Kotlin, and run it in Doc
 5. Navigate into the repository's directory again
 6. Make sure **libseccomp 2.4.2*** or higher is installed on your machine. If that's not the case, download it [here](https://packages.debian.org/sid/armhf/libseccomp2/download) and install it manually
 7. Change the ip address the container should expose in your `Dockerfile` to something fitting to your network.
-6. Start docker: `docker-compose up`
+6. In your repo directory, start docker-compose: `docker-compose up`. If you don't want to block your terminal, you can start it detached: `docker-compose up --detached`.
 7. Check if your container is running: `docker ps`
 8. See the **Hello, World** message by navigating to `http://[your-container's ip address]:8080`
 9. Open the `/application` directory in your favourite IDE and start building your Ktor server on top of the example
